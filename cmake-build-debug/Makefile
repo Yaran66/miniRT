@@ -129,125 +129,53 @@ miniRT/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/build
 .PHONY : miniRT/fast
 
-main.o: main.c.o
-.PHONY : main.o
+gnl/get_next_line.o: gnl/get_next_line.c.o
+.PHONY : gnl/get_next_line.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/main.c.o
-.PHONY : main.c.o
+gnl/get_next_line.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/gnl/get_next_line.c.o
+.PHONY : gnl/get_next_line.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+gnl/get_next_line.i: gnl/get_next_line.c.i
+.PHONY : gnl/get_next_line.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/main.c.i
-.PHONY : main.c.i
+gnl/get_next_line.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/gnl/get_next_line.c.i
+.PHONY : gnl/get_next_line.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+gnl/get_next_line.s: gnl/get_next_line.c.s
+.PHONY : gnl/get_next_line.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/main.c.s
-.PHONY : main.c.s
+gnl/get_next_line.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/gnl/get_next_line.c.s
+.PHONY : gnl/get_next_line.c.s
 
-scene/camera.o: scene/camera.c.o
-.PHONY : scene/camera.o
+gnl/get_next_line_utils.o: gnl/get_next_line_utils.c.o
+.PHONY : gnl/get_next_line_utils.o
 
 # target to build an object file
-scene/camera.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/scene/camera.c.o
-.PHONY : scene/camera.c.o
+gnl/get_next_line_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/gnl/get_next_line_utils.c.o
+.PHONY : gnl/get_next_line_utils.c.o
 
-scene/camera.i: scene/camera.c.i
-.PHONY : scene/camera.i
-
-# target to preprocess a source file
-scene/camera.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/scene/camera.c.i
-.PHONY : scene/camera.c.i
-
-scene/camera.s: scene/camera.c.s
-.PHONY : scene/camera.s
-
-# target to generate assembly for a file
-scene/camera.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/scene/camera.c.s
-.PHONY : scene/camera.c.s
-
-scene/scene.o: scene/scene.c.o
-.PHONY : scene/scene.o
-
-# target to build an object file
-scene/scene.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/scene/scene.c.o
-.PHONY : scene/scene.c.o
-
-scene/scene.i: scene/scene.c.i
-.PHONY : scene/scene.i
+gnl/get_next_line_utils.i: gnl/get_next_line_utils.c.i
+.PHONY : gnl/get_next_line_utils.i
 
 # target to preprocess a source file
-scene/scene.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/scene/scene.c.i
-.PHONY : scene/scene.c.i
+gnl/get_next_line_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/gnl/get_next_line_utils.c.i
+.PHONY : gnl/get_next_line_utils.c.i
 
-scene/scene.s: scene/scene.c.s
-.PHONY : scene/scene.s
-
-# target to generate assembly for a file
-scene/scene.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/scene/scene.c.s
-.PHONY : scene/scene.c.s
-
-srcs/figures/sphere.o: srcs/figures/sphere.c.o
-.PHONY : srcs/figures/sphere.o
-
-# target to build an object file
-srcs/figures/sphere.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/figures/sphere.c.o
-.PHONY : srcs/figures/sphere.c.o
-
-srcs/figures/sphere.i: srcs/figures/sphere.c.i
-.PHONY : srcs/figures/sphere.i
-
-# target to preprocess a source file
-srcs/figures/sphere.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/figures/sphere.c.i
-.PHONY : srcs/figures/sphere.c.i
-
-srcs/figures/sphere.s: srcs/figures/sphere.c.s
-.PHONY : srcs/figures/sphere.s
+gnl/get_next_line_utils.s: gnl/get_next_line_utils.c.s
+.PHONY : gnl/get_next_line_utils.s
 
 # target to generate assembly for a file
-srcs/figures/sphere.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/figures/sphere.c.s
-.PHONY : srcs/figures/sphere.c.s
-
-srcs/geometry/vector.o: srcs/geometry/vector.c.o
-.PHONY : srcs/geometry/vector.o
-
-# target to build an object file
-srcs/geometry/vector.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/geometry/vector.c.o
-.PHONY : srcs/geometry/vector.c.o
-
-srcs/geometry/vector.i: srcs/geometry/vector.c.i
-.PHONY : srcs/geometry/vector.i
-
-# target to preprocess a source file
-srcs/geometry/vector.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/geometry/vector.c.i
-.PHONY : srcs/geometry/vector.c.i
-
-srcs/geometry/vector.s: srcs/geometry/vector.c.s
-.PHONY : srcs/geometry/vector.s
-
-# target to generate assembly for a file
-srcs/geometry/vector.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/geometry/vector.c.s
-.PHONY : srcs/geometry/vector.c.s
+gnl/get_next_line_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/gnl/get_next_line_utils.c.s
+.PHONY : gnl/get_next_line_utils.c.s
 
 srcs/main.o: srcs/main.c.o
 .PHONY : srcs/main.o
@@ -273,6 +201,414 @@ srcs/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/main.c.s
 .PHONY : srcs/main.c.s
 
+srcs/parser/color_hex.o: srcs/parser/color_hex.c.o
+.PHONY : srcs/parser/color_hex.o
+
+# target to build an object file
+srcs/parser/color_hex.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/color_hex.c.o
+.PHONY : srcs/parser/color_hex.c.o
+
+srcs/parser/color_hex.i: srcs/parser/color_hex.c.i
+.PHONY : srcs/parser/color_hex.i
+
+# target to preprocess a source file
+srcs/parser/color_hex.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/color_hex.c.i
+.PHONY : srcs/parser/color_hex.c.i
+
+srcs/parser/color_hex.s: srcs/parser/color_hex.c.s
+.PHONY : srcs/parser/color_hex.s
+
+# target to generate assembly for a file
+srcs/parser/color_hex.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/color_hex.c.s
+.PHONY : srcs/parser/color_hex.c.s
+
+srcs/parser/ft_split.o: srcs/parser/ft_split.c.o
+.PHONY : srcs/parser/ft_split.o
+
+# target to build an object file
+srcs/parser/ft_split.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/ft_split.c.o
+.PHONY : srcs/parser/ft_split.c.o
+
+srcs/parser/ft_split.i: srcs/parser/ft_split.c.i
+.PHONY : srcs/parser/ft_split.i
+
+# target to preprocess a source file
+srcs/parser/ft_split.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/ft_split.c.i
+.PHONY : srcs/parser/ft_split.c.i
+
+srcs/parser/ft_split.s: srcs/parser/ft_split.c.s
+.PHONY : srcs/parser/ft_split.s
+
+# target to generate assembly for a file
+srcs/parser/ft_split.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/ft_split.c.s
+.PHONY : srcs/parser/ft_split.c.s
+
+srcs/parser/parse.o: srcs/parser/parse.c.o
+.PHONY : srcs/parser/parse.o
+
+# target to build an object file
+srcs/parser/parse.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse.c.o
+.PHONY : srcs/parser/parse.c.o
+
+srcs/parser/parse.i: srcs/parser/parse.c.i
+.PHONY : srcs/parser/parse.i
+
+# target to preprocess a source file
+srcs/parser/parse.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse.c.i
+.PHONY : srcs/parser/parse.c.i
+
+srcs/parser/parse.s: srcs/parser/parse.c.s
+.PHONY : srcs/parser/parse.s
+
+# target to generate assembly for a file
+srcs/parser/parse.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse.c.s
+.PHONY : srcs/parser/parse.c.s
+
+srcs/parser/parse_figures.o: srcs/parser/parse_figures.c.o
+.PHONY : srcs/parser/parse_figures.o
+
+# target to build an object file
+srcs/parser/parse_figures.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_figures.c.o
+.PHONY : srcs/parser/parse_figures.c.o
+
+srcs/parser/parse_figures.i: srcs/parser/parse_figures.c.i
+.PHONY : srcs/parser/parse_figures.i
+
+# target to preprocess a source file
+srcs/parser/parse_figures.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_figures.c.i
+.PHONY : srcs/parser/parse_figures.c.i
+
+srcs/parser/parse_figures.s: srcs/parser/parse_figures.c.s
+.PHONY : srcs/parser/parse_figures.s
+
+# target to generate assembly for a file
+srcs/parser/parse_figures.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_figures.c.s
+.PHONY : srcs/parser/parse_figures.c.s
+
+srcs/parser/parse_scene.o: srcs/parser/parse_scene.c.o
+.PHONY : srcs/parser/parse_scene.o
+
+# target to build an object file
+srcs/parser/parse_scene.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_scene.c.o
+.PHONY : srcs/parser/parse_scene.c.o
+
+srcs/parser/parse_scene.i: srcs/parser/parse_scene.c.i
+.PHONY : srcs/parser/parse_scene.i
+
+# target to preprocess a source file
+srcs/parser/parse_scene.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_scene.c.i
+.PHONY : srcs/parser/parse_scene.c.i
+
+srcs/parser/parse_scene.s: srcs/parser/parse_scene.c.s
+.PHONY : srcs/parser/parse_scene.s
+
+# target to generate assembly for a file
+srcs/parser/parse_scene.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_scene.c.s
+.PHONY : srcs/parser/parse_scene.c.s
+
+srcs/parser/parse_utils.o: srcs/parser/parse_utils.c.o
+.PHONY : srcs/parser/parse_utils.o
+
+# target to build an object file
+srcs/parser/parse_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils.c.o
+.PHONY : srcs/parser/parse_utils.c.o
+
+srcs/parser/parse_utils.i: srcs/parser/parse_utils.c.i
+.PHONY : srcs/parser/parse_utils.i
+
+# target to preprocess a source file
+srcs/parser/parse_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils.c.i
+.PHONY : srcs/parser/parse_utils.c.i
+
+srcs/parser/parse_utils.s: srcs/parser/parse_utils.c.s
+.PHONY : srcs/parser/parse_utils.s
+
+# target to generate assembly for a file
+srcs/parser/parse_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils.c.s
+.PHONY : srcs/parser/parse_utils.c.s
+
+srcs/parser/parse_utils_2.o: srcs/parser/parse_utils_2.c.o
+.PHONY : srcs/parser/parse_utils_2.o
+
+# target to build an object file
+srcs/parser/parse_utils_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils_2.c.o
+.PHONY : srcs/parser/parse_utils_2.c.o
+
+srcs/parser/parse_utils_2.i: srcs/parser/parse_utils_2.c.i
+.PHONY : srcs/parser/parse_utils_2.i
+
+# target to preprocess a source file
+srcs/parser/parse_utils_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils_2.c.i
+.PHONY : srcs/parser/parse_utils_2.c.i
+
+srcs/parser/parse_utils_2.s: srcs/parser/parse_utils_2.c.s
+.PHONY : srcs/parser/parse_utils_2.s
+
+# target to generate assembly for a file
+srcs/parser/parse_utils_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils_2.c.s
+.PHONY : srcs/parser/parse_utils_2.c.s
+
+srcs/parser/parse_utils_3.o: srcs/parser/parse_utils_3.c.o
+.PHONY : srcs/parser/parse_utils_3.o
+
+# target to build an object file
+srcs/parser/parse_utils_3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils_3.c.o
+.PHONY : srcs/parser/parse_utils_3.c.o
+
+srcs/parser/parse_utils_3.i: srcs/parser/parse_utils_3.c.i
+.PHONY : srcs/parser/parse_utils_3.i
+
+# target to preprocess a source file
+srcs/parser/parse_utils_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils_3.c.i
+.PHONY : srcs/parser/parse_utils_3.c.i
+
+srcs/parser/parse_utils_3.s: srcs/parser/parse_utils_3.c.s
+.PHONY : srcs/parser/parse_utils_3.s
+
+# target to generate assembly for a file
+srcs/parser/parse_utils_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/parser/parse_utils_3.c.s
+.PHONY : srcs/parser/parse_utils_3.c.s
+
+srcs/render/add_color.o: srcs/render/add_color.c.o
+.PHONY : srcs/render/add_color.o
+
+# target to build an object file
+srcs/render/add_color.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/add_color.c.o
+.PHONY : srcs/render/add_color.c.o
+
+srcs/render/add_color.i: srcs/render/add_color.c.i
+.PHONY : srcs/render/add_color.i
+
+# target to preprocess a source file
+srcs/render/add_color.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/add_color.c.i
+.PHONY : srcs/render/add_color.c.i
+
+srcs/render/add_color.s: srcs/render/add_color.c.s
+.PHONY : srcs/render/add_color.s
+
+# target to generate assembly for a file
+srcs/render/add_color.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/add_color.c.s
+.PHONY : srcs/render/add_color.c.s
+
+srcs/render/ambient_light.o: srcs/render/ambient_light.c.o
+.PHONY : srcs/render/ambient_light.o
+
+# target to build an object file
+srcs/render/ambient_light.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/ambient_light.c.o
+.PHONY : srcs/render/ambient_light.c.o
+
+srcs/render/ambient_light.i: srcs/render/ambient_light.c.i
+.PHONY : srcs/render/ambient_light.i
+
+# target to preprocess a source file
+srcs/render/ambient_light.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/ambient_light.c.i
+.PHONY : srcs/render/ambient_light.c.i
+
+srcs/render/ambient_light.s: srcs/render/ambient_light.c.s
+.PHONY : srcs/render/ambient_light.s
+
+# target to generate assembly for a file
+srcs/render/ambient_light.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/ambient_light.c.s
+.PHONY : srcs/render/ambient_light.c.s
+
+srcs/render/camera.o: srcs/render/camera.c.o
+.PHONY : srcs/render/camera.o
+
+# target to build an object file
+srcs/render/camera.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/camera.c.o
+.PHONY : srcs/render/camera.c.o
+
+srcs/render/camera.i: srcs/render/camera.c.i
+.PHONY : srcs/render/camera.i
+
+# target to preprocess a source file
+srcs/render/camera.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/camera.c.i
+.PHONY : srcs/render/camera.c.i
+
+srcs/render/camera.s: srcs/render/camera.c.s
+.PHONY : srcs/render/camera.s
+
+# target to generate assembly for a file
+srcs/render/camera.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/camera.c.s
+.PHONY : srcs/render/camera.c.s
+
+srcs/render/cylinder.o: srcs/render/cylinder.c.o
+.PHONY : srcs/render/cylinder.o
+
+# target to build an object file
+srcs/render/cylinder.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/cylinder.c.o
+.PHONY : srcs/render/cylinder.c.o
+
+srcs/render/cylinder.i: srcs/render/cylinder.c.i
+.PHONY : srcs/render/cylinder.i
+
+# target to preprocess a source file
+srcs/render/cylinder.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/cylinder.c.i
+.PHONY : srcs/render/cylinder.c.i
+
+srcs/render/cylinder.s: srcs/render/cylinder.c.s
+.PHONY : srcs/render/cylinder.s
+
+# target to generate assembly for a file
+srcs/render/cylinder.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/cylinder.c.s
+.PHONY : srcs/render/cylinder.c.s
+
+srcs/render/light.o: srcs/render/light.c.o
+.PHONY : srcs/render/light.o
+
+# target to build an object file
+srcs/render/light.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/light.c.o
+.PHONY : srcs/render/light.c.o
+
+srcs/render/light.i: srcs/render/light.c.i
+.PHONY : srcs/render/light.i
+
+# target to preprocess a source file
+srcs/render/light.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/light.c.i
+.PHONY : srcs/render/light.c.i
+
+srcs/render/light.s: srcs/render/light.c.s
+.PHONY : srcs/render/light.s
+
+# target to generate assembly for a file
+srcs/render/light.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/light.c.s
+.PHONY : srcs/render/light.c.s
+
+srcs/render/plane.o: srcs/render/plane.c.o
+.PHONY : srcs/render/plane.o
+
+# target to build an object file
+srcs/render/plane.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/plane.c.o
+.PHONY : srcs/render/plane.c.o
+
+srcs/render/plane.i: srcs/render/plane.c.i
+.PHONY : srcs/render/plane.i
+
+# target to preprocess a source file
+srcs/render/plane.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/plane.c.i
+.PHONY : srcs/render/plane.c.i
+
+srcs/render/plane.s: srcs/render/plane.c.s
+.PHONY : srcs/render/plane.s
+
+# target to generate assembly for a file
+srcs/render/plane.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/plane.c.s
+.PHONY : srcs/render/plane.c.s
+
+srcs/render/scene.o: srcs/render/scene.c.o
+.PHONY : srcs/render/scene.o
+
+# target to build an object file
+srcs/render/scene.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/scene.c.o
+.PHONY : srcs/render/scene.c.o
+
+srcs/render/scene.i: srcs/render/scene.c.i
+.PHONY : srcs/render/scene.i
+
+# target to preprocess a source file
+srcs/render/scene.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/scene.c.i
+.PHONY : srcs/render/scene.c.i
+
+srcs/render/scene.s: srcs/render/scene.c.s
+.PHONY : srcs/render/scene.s
+
+# target to generate assembly for a file
+srcs/render/scene.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/scene.c.s
+.PHONY : srcs/render/scene.c.s
+
+srcs/render/sphere.o: srcs/render/sphere.c.o
+.PHONY : srcs/render/sphere.o
+
+# target to build an object file
+srcs/render/sphere.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/sphere.c.o
+.PHONY : srcs/render/sphere.c.o
+
+srcs/render/sphere.i: srcs/render/sphere.c.i
+.PHONY : srcs/render/sphere.i
+
+# target to preprocess a source file
+srcs/render/sphere.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/sphere.c.i
+.PHONY : srcs/render/sphere.c.i
+
+srcs/render/sphere.s: srcs/render/sphere.c.s
+.PHONY : srcs/render/sphere.s
+
+# target to generate assembly for a file
+srcs/render/sphere.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/sphere.c.s
+.PHONY : srcs/render/sphere.c.s
+
+srcs/render/vector.o: srcs/render/vector.c.o
+.PHONY : srcs/render/vector.o
+
+# target to build an object file
+srcs/render/vector.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/vector.c.o
+.PHONY : srcs/render/vector.c.o
+
+srcs/render/vector.i: srcs/render/vector.c.i
+.PHONY : srcs/render/vector.i
+
+# target to preprocess a source file
+srcs/render/vector.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/vector.c.i
+.PHONY : srcs/render/vector.c.i
+
+srcs/render/vector.s: srcs/render/vector.c.s
+.PHONY : srcs/render/vector.s
+
+# target to generate assembly for a file
+srcs/render/vector.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/render/vector.c.s
+.PHONY : srcs/render/vector.c.s
+
 srcs/utils/error_exit.o: srcs/utils/error_exit.c.o
 .PHONY : srcs/utils/error_exit.o
 
@@ -297,6 +633,30 @@ srcs/utils/error_exit.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/utils/error_exit.c.s
 .PHONY : srcs/utils/error_exit.c.s
 
+srcs/utils/lists_operator.o: srcs/utils/lists_operator.c.o
+.PHONY : srcs/utils/lists_operator.o
+
+# target to build an object file
+srcs/utils/lists_operator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/utils/lists_operator.c.o
+.PHONY : srcs/utils/lists_operator.c.o
+
+srcs/utils/lists_operator.i: srcs/utils/lists_operator.c.i
+.PHONY : srcs/utils/lists_operator.i
+
+# target to preprocess a source file
+srcs/utils/lists_operator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/utils/lists_operator.c.i
+.PHONY : srcs/utils/lists_operator.c.i
+
+srcs/utils/lists_operator.s: srcs/utils/lists_operator.c.s
+.PHONY : srcs/utils/lists_operator.s
+
+# target to generate assembly for a file
+srcs/utils/lists_operator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/miniRT.dir/build.make CMakeFiles/miniRT.dir/srcs/utils/lists_operator.c.s
+.PHONY : srcs/utils/lists_operator.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,27 +666,72 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... miniRT"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... scene/camera.o"
-	@echo "... scene/camera.i"
-	@echo "... scene/camera.s"
-	@echo "... scene/scene.o"
-	@echo "... scene/scene.i"
-	@echo "... scene/scene.s"
-	@echo "... srcs/figures/sphere.o"
-	@echo "... srcs/figures/sphere.i"
-	@echo "... srcs/figures/sphere.s"
-	@echo "... srcs/geometry/vector.o"
-	@echo "... srcs/geometry/vector.i"
-	@echo "... srcs/geometry/vector.s"
+	@echo "... gnl/get_next_line.o"
+	@echo "... gnl/get_next_line.i"
+	@echo "... gnl/get_next_line.s"
+	@echo "... gnl/get_next_line_utils.o"
+	@echo "... gnl/get_next_line_utils.i"
+	@echo "... gnl/get_next_line_utils.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
+	@echo "... srcs/parser/color_hex.o"
+	@echo "... srcs/parser/color_hex.i"
+	@echo "... srcs/parser/color_hex.s"
+	@echo "... srcs/parser/ft_split.o"
+	@echo "... srcs/parser/ft_split.i"
+	@echo "... srcs/parser/ft_split.s"
+	@echo "... srcs/parser/parse.o"
+	@echo "... srcs/parser/parse.i"
+	@echo "... srcs/parser/parse.s"
+	@echo "... srcs/parser/parse_figures.o"
+	@echo "... srcs/parser/parse_figures.i"
+	@echo "... srcs/parser/parse_figures.s"
+	@echo "... srcs/parser/parse_scene.o"
+	@echo "... srcs/parser/parse_scene.i"
+	@echo "... srcs/parser/parse_scene.s"
+	@echo "... srcs/parser/parse_utils.o"
+	@echo "... srcs/parser/parse_utils.i"
+	@echo "... srcs/parser/parse_utils.s"
+	@echo "... srcs/parser/parse_utils_2.o"
+	@echo "... srcs/parser/parse_utils_2.i"
+	@echo "... srcs/parser/parse_utils_2.s"
+	@echo "... srcs/parser/parse_utils_3.o"
+	@echo "... srcs/parser/parse_utils_3.i"
+	@echo "... srcs/parser/parse_utils_3.s"
+	@echo "... srcs/render/add_color.o"
+	@echo "... srcs/render/add_color.i"
+	@echo "... srcs/render/add_color.s"
+	@echo "... srcs/render/ambient_light.o"
+	@echo "... srcs/render/ambient_light.i"
+	@echo "... srcs/render/ambient_light.s"
+	@echo "... srcs/render/camera.o"
+	@echo "... srcs/render/camera.i"
+	@echo "... srcs/render/camera.s"
+	@echo "... srcs/render/cylinder.o"
+	@echo "... srcs/render/cylinder.i"
+	@echo "... srcs/render/cylinder.s"
+	@echo "... srcs/render/light.o"
+	@echo "... srcs/render/light.i"
+	@echo "... srcs/render/light.s"
+	@echo "... srcs/render/plane.o"
+	@echo "... srcs/render/plane.i"
+	@echo "... srcs/render/plane.s"
+	@echo "... srcs/render/scene.o"
+	@echo "... srcs/render/scene.i"
+	@echo "... srcs/render/scene.s"
+	@echo "... srcs/render/sphere.o"
+	@echo "... srcs/render/sphere.i"
+	@echo "... srcs/render/sphere.s"
+	@echo "... srcs/render/vector.o"
+	@echo "... srcs/render/vector.i"
+	@echo "... srcs/render/vector.s"
 	@echo "... srcs/utils/error_exit.o"
 	@echo "... srcs/utils/error_exit.i"
 	@echo "... srcs/utils/error_exit.s"
+	@echo "... srcs/utils/lists_operator.o"
+	@echo "... srcs/utils/lists_operator.i"
+	@echo "... srcs/utils/lists_operator.s"
 .PHONY : help
 
 

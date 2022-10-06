@@ -76,13 +76,43 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/gnl/get_next_line.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/gnl/get_next_line_utils.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/ambient_light.h">
+			<Option target="miniRT"/>
+		</Unit>
 		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/camera.h">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/color.h">
 			<Option target="miniRT"/>
 		</Unit>
 		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/config.h">
 			<Option target="miniRT"/>
 		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/cylinder.h">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/get_next_line.h">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/light.h">
+			<Option target="miniRT"/>
+		</Unit>
 		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/minirt.h">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/mlx_struct.h">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/parser.h">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/plane.h">
 			<Option target="miniRT"/>
 		</Unit>
 		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/scene.h">
@@ -97,25 +127,64 @@
 		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/includes/vector.h">
 			<Option target="miniRT"/>
 		</Unit>
-		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/main.c">
-			<Option target="miniRT"/>
-		</Unit>
-		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/scene/camera.c">
-			<Option target="miniRT"/>
-		</Unit>
-		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/scene/scene.c">
-			<Option target="miniRT"/>
-		</Unit>
-		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/figures/sphere.c">
-			<Option target="miniRT"/>
-		</Unit>
-		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/geometry/vector.c">
-			<Option target="miniRT"/>
-		</Unit>
 		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/main.c">
 			<Option target="miniRT"/>
 		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/parser/color_hex.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/parser/ft_split.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/parser/parse.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/parser/parse_figures.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/parser/parse_scene.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/parser/parse_utils.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/parser/parse_utils_2.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/parser/parse_utils_3.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/add_color.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/ambient_light.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/camera.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/cylinder.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/light.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/plane.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/scene.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/sphere.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/render/vector.c">
+			<Option target="miniRT"/>
+		</Unit>
 		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/utils/error_exit.c">
+			<Option target="miniRT"/>
+		</Unit>
+		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/srcs/utils/lists_operator.c">
 			<Option target="miniRT"/>
 		</Unit>
 		<Unit filename="/Users/alekseytvorogov/Desktop/fteeliy/CMakeLists.txt">
