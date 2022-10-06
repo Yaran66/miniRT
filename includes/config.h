@@ -6,7 +6,8 @@
 /*   By: wdwain <wdwain@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:35:18 by wdwain            #+#    #+#             */
-/*   Updated: 2022/09/23 18:52:36 by wjasmine         ###   ########.fr       */
+/*   Updated: 2022/10/04 13:05:54 by wjasmine         ###   ########.fr       */
+/*   Updated: 2022/09/26 22:39:09 by wdwain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +30,21 @@
 # define MALLOC_ERROR "Couldn't allocate memory."
 # define FILE_EXT_ERROR "File extension should be *.rt"
 # define ARGV_ERROR "Only 1 scene file allowed"
+# define FILE_READ_ERROR "Can't open the file/fd"
+# define PARSE_ERROR "Can't parse scene/file"
+# define ELEMENT_PARAMS_ERROR "Wrong element's information."
 
-//typedef enum s_bool
+//typedef struct s_list
 //{
-//	false,
-//	true
-//}			t_bool;
+//	void			*content;
+//	struct s_list	*next;
+//}	t_list;
+
+typedef enum s_bool
+{
+	false,
+	true
+}			t_bool;
 
 
 #endif //CONFIG_H
