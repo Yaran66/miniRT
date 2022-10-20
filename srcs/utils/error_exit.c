@@ -1,27 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   error_exit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wdwain <wdwain@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 19:36:24 by wdwain            #+#    #+#             */
-/*   Updated: 2022/10/04 13:05:54 by wjasmine         ###   ########.fr       */
-/*   Updated: 2022/09/27 12:06:02 by wjasmine         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:54:06 by wdwain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../../includes/minirt.h"
-
-//int	ft_strlen(const char *str)
-//{
-//	int	i;
-//
-//	i = 0;
-//	while (*(str + i) != '\0')
-//		i++;
-//	return (i);
-//}
 
 void	error_exit(char *code)
 {
@@ -33,55 +22,67 @@ void	error_exit(char *code)
 	exit(EXIT_FAILURE);
 }
 
-//t_list	*ft_lstnew(void *content)
-//{
-//	t_list	*list;
-//
-//	list = (t_list *)malloc(sizeof(t_list));
-//	if (!list)
-//		return ((t_list *) NULL);
-//	list->content = content;
-//	list->next = NULL;
-//	return (list);
-//}
-//
-//t_list	*ft_lstlast(t_list *lst)
-//{
-//	t_list	*last;
-//
-//	if (lst)
-//	{
-//		while (lst->next)
-//			lst = lst->next;
-//	}
-//	last = lst;
-//	return (last);
-//}
-//
-//void	ft_lstadd_back(t_list **lst, t_list *new)
-//{
-//	t_list	*last;
-//
-//	if (*lst)
-//	{
-//		last = ft_lstlast(*lst);
-//		last->next = new;
-//	}
-//	else
-//		*lst = new;
-//}
+void	print_progress_by_percent(float percentage)
+{
+	int	val;
+	int	lpad;
+	int	rpad;
 
-//void	error_exit(int code)
-//{
-//	if (code == -1)
-//		write(STDERR_FILENO, "Error: Can't allocate memory for new elemmemt\n",
-//			  46);
-//	exit(code);
-//}
+	val = (int)(percentage * 100);
+	if (val % 10 != 0)
+		return ;
+	lpad = (int)(percentage * PBWIDTH);
+	rpad = PBWIDTH - lpad;
+	printf("\r%3d%% [%.*s%*s]", val, lpad, PBSTR, rpad, "");
+}
 
-//int main(void)
-//{
-////	error_exit(MALLOC_ERROR);
-//	error_exit(FILE_EXT_ERROR);
-//	return(0);
-//}
+void	clear_scene_2(t_list *tmp)
+{
+	if (((t_scene_element *)tmp->content)->type == SPHERE)
+	{
+		free(((t_sphere *)((t_scene_element *)tmp->content)->data)->center);
+		free(((t_sphere *)((t_scene_element *)tmp->content)->data));
+	}
+	else if (((t_scene_element *)tmp->content)->type == PLANE)
+	{
+		free(((t_plane *)((t_scene_element *)tmp->content)->data)->normal);
+		free(((t_plane *)((t_scene_element *)tmp->content)->data)->point);
+		free(((t_plane *)((t_scene_element *)tmp->content)->data));
+	}
+	else if (((t_scene_element *)tmp->content)->type == CYLINDER)
+	{
+		free(((t_cylinder *)((t_scene_element *)
+					tmp->content)->data)->normal);
+		free(((t_cylinder *)((t_scene_element *)
+					tmp->content)->data)->point);
+		free(((t_cylinder *)((t_scene_element *)tmp->content)->data));
+	}
+}
+
+void	clear_scene(t_list **scene_elements)
+{
+	t_list	*tmp;
+
+	tmp = *scene_elements;
+	while (tmp)
+	{
+		if (((t_scene_element *)tmp->content)->type == AMBIENT_LIGHTNING)
+			free(((t_scene_element *)tmp->content)->data);
+		else if (((t_scene_element *)tmp->content)->type == CAMERA)
+		{
+			free(((t_camera *)((t_scene_element *)
+						tmp->content)->data)->origin);
+			free(((t_camera *)((t_scene_element *)
+						tmp->content)->data)->direction);
+			free(((t_camera *)((t_scene_element *)tmp->content)->data));
+		}
+		else if (((t_scene_element *)tmp->content)->type == LIGHT)
+		{
+			free(((t_light *)((t_scene_element *)tmp->content)->data)->center);
+			free(((t_light *)((t_scene_element *)tmp->content)->data));
+		}
+		clear_scene_2(tmp);
+		tmp = tmp->next;
+	}
+	ft_lstclear(scene_elements, free);
+}

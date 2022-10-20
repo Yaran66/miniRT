@@ -21,10 +21,6 @@ t_ambient_light	*ambient_light_new(float brightness, unsigned int hex_rgb)
 		error_exit(MALLOC_ERROR);
 	ambient_light->brightness = brightness;
 	ambient_light->hex_rgb = hex_rgb;
-//	printf("ambient_light.c brigthness=%f, red=%i, green=%i, blue=%i \n",
-//		   ambient_light->brightness, get_r_from_hex(ambient_light->hex_rgb),
-//		   get_g_from_hex (ambient_light->hex_rgb), get_b_from_hex
-//		   (ambient_light->hex_rgb) );
 	return (ambient_light);
 }
 
@@ -51,9 +47,9 @@ unsigned int	calculate_ambient_color(t_list *ambient_lights,
 	while (ambient_lights)
 	{
 		ambient_light = ambient_lights->content;
-		hex_rgb = hex_rgb_add(hex_rgb,
-							  hex_rgb_apply_brightness(ambient_light->hex_rgb,
-													   ambient_light->brightness));
+		hex_rgb = hex_rgb_add(hex_rgb, \
+		hex_rgb_apply_brightness(ambient_light->hex_rgb, \
+		ambient_light->brightness));
 		ambient_lights = ambient_lights->next;
 	}
 	return (hex_rgb);

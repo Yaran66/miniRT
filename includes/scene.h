@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #ifndef SCENE_H
-#define SCENE_H
+# define SCENE_H
 
-typedef struct	s_scene
+typedef struct s_scene
 {
 	t_camera	*cams;
 	t_sphere	*sphere;
@@ -52,17 +52,13 @@ typedef struct s_element_exists
 	t_bool	ambient_light;
 	t_bool	camera;
 	t_bool	light;
-	//t_bool	multi_ambient_light; //need for bonus??
-	//t_bool	multi_light; //need for bonus??
-}	t_element_exists;
-
+}				t_element_exists;
 
 // srcs/render/scene.c
 t_scene_element		*scene_element_new(t_scene_element_type type, void *data);
-t_list				*filter_scene_elements(t_list *scene_elements,
-											 t_scene_element_type type);
+t_list				*filter_scene_elements(t_list *scene_elements, \
+					t_scene_element_type type);
 t_filtered_elements	filtered_elements_new(t_list *scene_elements);
-
-t_scene	*new_scene(t_camera *cam, t_sphere *sphere);
+t_scene				*new_scene(t_camera *cam, t_sphere *sphere);
 
 #endif //SCENE_H

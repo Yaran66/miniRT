@@ -7,29 +7,23 @@
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 10:47:12 by wjasmine          #+#    #+#             */
 /*   Updated: 2022/10/04 13:05:55 by wjasmine         ###   ########.fr       */
-/*   Updated: 2022/09/27 12:06:02 by wjasmine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minirt.h"
 
-static void	parse_ambient_light(t_list **elements, char **array,
-								   t_element_exists *element_exists)
+static void	parse_ambient_light(t_list **elements, char **array, \
+									t_element_exists *element_exists)
 {
 	float			brightness;
 	unsigned int	colors;
 
 	if (array[0][0] == 'A' && element_exists->ambient_light == true)
-		error_exit(ELEMENT_PARAMS_ERROR);// X3 why
-//	if ((array[0][0] == 'A' && element_exists->multi_ambient_light == true)
-//		|| (array[0][0] == 'a' && element_exists->ambient_light == true))
-//		error_exit(ELEMENT_PARAMS_ERROR);
+		error_exit(ELEMENT_PARAMS_ERROR);
 	if (array[0][1] != '\0')
 		error_exit(ELEMENT_PARAMS_ERROR);
 	if (ft_arraylen(array) != 3)
 		error_exit(ELEMENT_PARAMS_ERROR);
-//	printf("fm parse.c, argument ambient_light %s %s %s \n", array[0],
-//		   array[1], array[2]);
 	brightness = ft_atof(check_float_str(array[1]));
 	if (!(brightness >= 0.0 && brightness <= 1.0))
 		error_exit(ELEMENT_PARAMS_ERROR);
@@ -38,8 +32,6 @@ static void	parse_ambient_light(t_list **elements, char **array,
 			ambient_light_new(brightness, colors))));
 	if (array[0][0] == 'A')
 		element_exists->ambient_light = true;
-//	if (array[0][0] == 'a')
-//		element_exists->multi_ambient_light = true;
 }
 
 static void	parse_camera(t_list **elements, char **array,
@@ -55,8 +47,6 @@ static void	parse_camera(t_list **elements, char **array,
 		error_exit(ELEMENT_PARAMS_ERROR);
 	if (ft_arraylen(array) != 4)
 		error_exit(ELEMENT_PARAMS_ERROR);
-//	printf("fm parse.c, argument parse_camera %s %s %s %s\n", array[0],
-//		   array[1], array[2], array[3]);
 	coordinates = parse_coordinates(array[1]);
 	vector = parse_vector(array[2]);
 	angle = ft_atoi(check_int_str(array[3]));
@@ -67,8 +57,8 @@ static void	parse_camera(t_list **elements, char **array,
 	element_exists->camera = true;
 }
 
-static void	parse_light(t_list	**elements, char **array,
-						   t_element_exists *element_exists)
+static void	parse_light(t_list	**elements, char **array, \
+							t_element_exists *element_exists)
 {
 	t_vector		*point;
 	float			brightness;
@@ -76,12 +66,7 @@ static void	parse_light(t_list	**elements, char **array,
 
 	if (array[0][0] == 'L' && element_exists->light == true)
 		error_exit(ELEMENT_PARAMS_ERROR);
-//	if ((array[0][0] == 'L' && element_exists->multi_light == true) ||
-//		(array[0][0] == 'l' && element_exists->light == true))
-//		display_error_exit(ELEMENT_PARAMS_ERROR);
-//	printf("fm parse.c, argument parse_light %s %s %s %s\n", array[0],
-//		   array[1], array[2], array[3]);
-	if (array[0][1] != '\0') // X3, next line should be \0,
+	if (array[0][1] != '\0')
 		error_exit(ELEMENT_PARAMS_ERROR);
 	if (ft_arraylen(array) != 4)
 		error_exit(ELEMENT_PARAMS_ERROR);
@@ -94,33 +79,26 @@ static void	parse_light(t_list	**elements, char **array,
 			light_new(point, brightness, colors))));
 	if (array[0][0] == 'L')
 		element_exists->light = true;
-//	if (array[0][0] == 'l')
-//		element_exists->multi_light = true;
 }
-
-/* t_list *elements this the list which we use to create the Singly linked lists
- * of all our details like figures, light, camera, etc...*/
 
 void	parse(t_list **elements, char *line,
 				t_element_exists *element_exists)
 {
-	char **splitted_line;
+	char	**splitted_line;
 
 	if (line[0] == '\n')
-		return;
+		return ;
 	splitted_line = ft_split(line, ' ');
 	if (splitted_line == NULL)
 		error_exit(PARSE_ERROR);
-	else if (splitted_line[0][0] == 'A' /*|| splitted_line[0][0] == 'a'*/)
+	else if (splitted_line[0][0] == 'A')
 		parse_ambient_light(elements, splitted_line, element_exists);
 	else if (splitted_line[0][0] == 'C')
 		parse_camera(elements, splitted_line, element_exists);
-	else if (splitted_line[0][0] == 'L' /*|| splitted_line[0][0] == 'l'*/)
+	else if (splitted_line[0][0] == 'L')
 		parse_light(elements, splitted_line, element_exists);
 	else
 	{
-//		printf("fm parse.c, argument splitted_line only figure %s \n",
-//			   splitted_line[0]);
 		parse_figures(elements, splitted_line);
 	}
 	ft_free_array(splitted_line);

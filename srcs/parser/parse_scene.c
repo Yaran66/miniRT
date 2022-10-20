@@ -12,8 +12,8 @@
 
 #include "../../includes/minirt.h"
 
-static void	read_parse_file(int fd, t_list **elements,
-									 t_element_exists *element_exists)
+static void	read_parse_file(int fd, t_list **elements, \
+								t_element_exists *element_exists)
 {
 	char	*line;
 
@@ -29,14 +29,10 @@ static void	read_parse_file(int fd, t_list **elements,
 			line[ft_strlen(line) - 1] = '\0';
 		if (line[0] == '\n' || line[0] == '\0')
 			continue ;
-		//printf("fm parse_scene, line 32 %s\n", line);
 		parse(elements, line, element_exists);
 	}
 	free(line);
 }
-
-/* t_list *elements this the list which we use to create the Singly linked lists
- * of all our details like figures, light, camera, etc...*/
 
 t_list	*parse_scene(char *file)
 {
@@ -48,12 +44,9 @@ t_list	*parse_scene(char *file)
 	element_exists.ambient_light = false;
 	element_exists.camera = false;
 	element_exists.light = false;
-	//element_exists.multi_ambient_light = false; //need for bonus??
-	//element_exists.multi_light = false; //need for bonus??
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
 		error_exit(FILE_READ_ERROR);
 	read_parse_file(fd, &elements, &element_exists);
 	return (elements);
 }
-

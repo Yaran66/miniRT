@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef PARSER_H
-#define PARSER_H
+# define PARSER_H
 
 t_list	*parse_scene(char *file);
 void	parse(t_list **elements, char *line, t_element_exists *element_exists);

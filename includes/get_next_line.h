@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wdwain <wdwain@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 13:48:52 by wjasmine          #+#    #+#             */
-/*   Updated: 2022/04/21 21:37:49 by wjasmine         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:21:38 by wdwain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 

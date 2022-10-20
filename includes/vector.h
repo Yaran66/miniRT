@@ -13,16 +13,23 @@
 #ifndef VECTOR_H
 # define VECTOR_H
 
-typedef struct	s_vector
+typedef struct s_vector
 {
 	float	x;
 	float	y;
 	float	z;
-}	t_vector;
+}				t_vector;
 
 t_vector	*new_vector(float x, float y, float z);
-t_vector	*vec_substract(t_vector *vec1, t_vector *vec2);
+t_vector	*vec_subtract(t_vector *vec1, t_vector *vec2);
+t_vector	*vector_add(t_vector *a, t_vector *b);
+t_vector	*vector_scalar_multiple(t_vector *a, float b);
 float		vec_length(t_vector *vec);
+
+// vector_stack.c
+t_vector	vector_add_stack(t_vector a, t_vector b);
+t_vector	vector_subtract_stack(t_vector a, t_vector b);
+t_vector	vector_scalar_multiple_stack(t_vector a, float b);
 void		vec_norm(t_vector *vec);
 float		vec_dot_product(t_vector *vec1, t_vector *vec2);
 

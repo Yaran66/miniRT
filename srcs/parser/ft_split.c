@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wdwain <wdwain@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:23:34 by wjasmine          #+#    #+#             */
-/*   Updated: 2022/09/25 20:32:47 by wjasmine         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:29:27 by wdwain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "../../includes/minirt.h"
 
 static int	ft_wordcount(const char *s, char c)
@@ -93,4 +94,3 @@ char	**ft_split(char const *s, char c)
 	splitstr[i] = NULL;
 	return (splitstr);
 }
-

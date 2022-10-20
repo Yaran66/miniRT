@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wdwain <wdwain@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 13:51:35 by wjasmine          #+#    #+#             */
-/*   Updated: 2022/10/04 13:05:54 by wjasmine         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:45:51 by wdwain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "../includes/get_next_line.h"
 
 char	*ft_strcpy(char *dest, char *src)

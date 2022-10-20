@@ -13,7 +13,7 @@
 #ifndef CAMERA_H
 # define CAMERA_H
 
-typedef struct	s_camera
+typedef struct s_camera
 {
 	t_vector	*origin;
 	t_vector	*direction;

@@ -40,7 +40,7 @@ float	ft_atof(char *str)
 	sign = 1;
 	i = 0;
 	if (!check_input(str, &sign))
-		error_exit(ELEMENT_PARAMS_ERROR); //return (0);
+		error_exit(ELEMENT_PARAMS_ERROR);
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] != '.' && str[i] != ',' && str[i])
@@ -77,7 +77,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	value = 0;
 	while (*str == '\t' || *str == '\n' || *str == '\v' || *str == '\f'
-		   || *str == '\r' || *str == ' ')
+		|| *str == '\r' || *str == ' ')
 		str++;
 	if (*str == '-')
 	{
@@ -114,13 +114,9 @@ unsigned int	parse_colors(char *array)
 	red = ft_atoi(check_int_str(colors[0]));
 	green = ft_atoi(check_int_str(colors[1]));
 	blue = ft_atoi(check_int_str(colors[2]));
-//	printf( "parse_utils_2, red= %i, green= %i, blue= %i \n", red, green, blue);
 	if (!(red >= 0 && red <= 255) || !(green >= 0 && green <= 255)
 		|| !(blue >= 0 && blue <= 255))
 		error_exit(ELEMENT_PARAMS_ERROR);
 	ft_free_array(colors);
-	//return (red << 16 | green << 8 | blue);// return in hex format
-	return (rgb_to_hex(red, green, blue));// X3 why we return 3 numbers in
-	// hex, result going to unsigned int
+	return (rgb_to_hex(red, green, blue));
 }
-

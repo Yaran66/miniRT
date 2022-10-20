@@ -20,12 +20,15 @@ typedef struct s_list
 }	t_list;
 
 // srcs/utils/error_exit.c
-//int				ft_strlen(const char *str);
 void			error_exit(char *code);
+void			print_progress_by_percent(float percentage);
+void			clear_scene_2(t_list *tmp);
+void			clear_scene(t_list **scene_elements);
 // srcs/utils/lists_operator.c
 t_list			*ft_lstnew(void *content);
 t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstclear(t_list **lst, void (*del)(void*));
 // srcs/parser/ft_split.c
 char			**ft_split(char const *s, char c);
 // srcs/parser/parse_utils.c
@@ -38,9 +41,11 @@ char			*check_int_str(char *str);
 float			ft_atof(char *str);
 unsigned int	parse_colors(char *array);
 int				ft_atoi(const char *str);
-void	check_commas(char *array);
+void			check_commas(char *array);
 // srcs/parser/parse_utils_3.c
-t_vector	*parse_coordinates(char *array);
-t_vector	*parse_vector(char *array);
+t_vector		*parse_coordinates(char *array);
+t_vector		*parse_vector(char *array);
+// solve_quadratic_equation.c
+float			*solve_quadratic_equation(float a, float b, float c);
 
 #endif //UTILS_H

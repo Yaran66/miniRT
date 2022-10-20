@@ -1,13 +1,15 @@
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   add_color.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wjasmine <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wdwain <wdwain@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 10:47:12 by wjasmine          #+#    #+#             */
-/*   Updated: 2022/09/27 19:40:25 by wjasmine         ###   ########.fr       */
+/*   Created: 2022/10/14 11:28:59 by wdwain            #+#    #+#             */
+/*   Updated: 2022/10/14 11:29:01 by wdwain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "../../includes/minirt.h"
 
 static unsigned int	limit_color(unsigned int color)
@@ -25,12 +27,12 @@ unsigned int	hex_rgb_apply_brightness(unsigned int hex_rgb, float brightness)
 	unsigned int	g;
 	unsigned int	b;
 
-	r = limit_color((unsigned int)((float)get_r_from_hex(hex_rgb)
-								   * brightness));
-	g = limit_color((unsigned int)((float)get_g_from_hex(hex_rgb)
-								   * brightness));
-	b = limit_color((unsigned int)((float)get_b_from_hex(hex_rgb)
-								   * brightness));
+	r = limit_color((unsigned int)((float)get_r_from_hex(hex_rgb) \
+							* brightness));
+	g = limit_color((unsigned int)((float)get_g_from_hex(hex_rgb) \
+							* brightness));
+	b = limit_color((unsigned int)((float)get_b_from_hex(hex_rgb) \
+							* brightness));
 	return (rgb_to_hex(r, g, b));
 }
 

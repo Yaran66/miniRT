@@ -14,18 +14,18 @@
 #ifndef CONFIG_H
 # define CONFIG_H
 
-//# define PBSTR "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
-//# define PBWIDTH 60
-//
-//# define ESC_KEY_CODE 65307
-//# define WINDOW_NAME "miniRT"
-//
-//# define WINDOW_WIDTH 400
-//# define WINDOW_HEIGHT 400
-//
-//# define BLACK_COLOR 0x000000
-//
-//# define EPSILON 1e-4
+# define PBSTR "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+# define PBWIDTH 60
+
+# define ESC_KEY_CODE 53 //65307 for Linux
+# define WINDOW_NAME "miniRT"
+
+# define WINDOW_WIDTH 400
+# define WINDOW_HEIGHT 400
+
+# define BLACK_COLOR 0x000000
+
+# define EPSILON 1e-4
 
 # define MALLOC_ERROR "Couldn't allocate memory."
 # define FILE_EXT_ERROR "File extension should be *.rt"
@@ -34,17 +34,10 @@
 # define PARSE_ERROR "Can't parse scene/file"
 # define ELEMENT_PARAMS_ERROR "Wrong element's information."
 
-//typedef struct s_list
-//{
-//	void			*content;
-//	struct s_list	*next;
-//}	t_list;
-
 typedef enum s_bool
 {
 	false,
 	true
 }			t_bool;
-
 
 #endif //CONFIG_H

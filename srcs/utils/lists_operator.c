@@ -10,28 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "./../../includes/minirt.h"
-
-//int	ft_strlen(char *str)
-//{
-//	int	i;
-//
-//	i = 0;
-//	while (*(str + i) != '\0')
-//		i++;
-//	return (i);
-//}
-//
-//void	error_exit(char *code)
-//{
-//	if (code)
-//	{
-//		write(STDERR_FILENO, code, ft_strlen(code));
-//		write(STDERR_FILENO, " \nError\n", 8);
-//	}
-//	exit(EXIT_FAILURE);
-//}
 
 t_list	*ft_lstnew(void *content)
 {
@@ -69,4 +48,20 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	else
 		*lst = new;
+}
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*old;
+
+	if (!del)
+		return ;
+	while (*lst)
+	{
+		(*del)((*lst)->content);
+		old = *lst;
+		*lst = old->next;
+		free(old);
+	}
+	*lst = NULL;
 }

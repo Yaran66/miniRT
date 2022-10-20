@@ -2,11 +2,24 @@ NAME		= miniRT
 
 CC			= cc
 RM			= rm -rf
-#CFLAGS		= -Wall -Werror -Wextra -I$(DIR_HEADERS) -MMD -O3
-CFLAGS		= -I$(DIR_HEADERS) -MMD -O3
+
+#CFLAGS		= -I$(DIR_HEADERS) -MMD -O3
+CFLAGS		= -Wall -Werror -Wextra -I$(DIR_HEADERS) -MMD -O3
+MLX_F		= font.c font.xcf mlx_init_loop.m \
+              mlx_int.h mlx_int_str_to_wordtab.c mlx_mouse.m \
+              mlx_new_image.m mlx_new_window.h mlx_new_window.m \
+              mlx_opengl.h mlx_opengl.m mlx_png.c \
+              mlx_png.h mlx_rgb.c mlx_shaders.c \
+              mlx_xpm.c
+
+MLX_DIR		= mlx/
+MLX_DIR_LINUX		= mlx_linux/
+MLX_H		= $(addprefix $(MLX_DIR), mlx.h)
+MLX			= $(addprefix $(MLX_DIR), libmlx.a)
+MLX_FLS		= $(addprefix $(MLX_DIR), $(MLX_F))
+MLX_FLAGS	= -Lmlx -lmlx -framework OpenGL -framework AppKit
 
 DIR_HEADERS	= includes/
-
 SRCS_DIR	= srcs/
 
 SRCS			= $(addprefix $(SRCS_DIR), main.c)
@@ -35,7 +48,17 @@ SRCS_RENDER		= add_color.c \
 					plane.c \
 					scene.c \
 					sphere.c \
-					vector.c
+					vector.c \
+					ray_tracing.c \
+					ray.c \
+					mlx_image.c \
+					calc_pixel_color.c \
+					vector_stack.c \
+					cylinder_caps_pipe.c \
+					intersection.c \
+					solve_quadratic_equation.c \
+					camera_direction_calc.c \
+					hooks.c
 SRCS_UTILS		= error_exit.c \
 					lists_operator.c
 
@@ -48,36 +71,18 @@ SRCS			+= $(addprefix $(PARSING_DIR), $(SRCS_PARSER)) \
 OBJS_DIR		= objs/
 OBJS			= $(addprefix $(OBJS_DIR), $(SRCS:.c=.o))
 
-MLX_DIR			= mlx_linux/
-MLX_FLAGS_LINUX	= -L$(MLX_DIR) -lmlx_Linux -L/usr/lib -I$(MLX_DIR) -lXext -lX11 -lm -lz
-MLX_FLAGS_MAC	= -L$(MLX_DIR) -lmlx_Darwin -L/usr/lib -I$(MLX_DIR) -lXext -lX11 -lm -lz
-LIBMLX			= $(addprefix $(MLX_DIR), libmlx_Linux)
-
-SRCS			+= $(addprefix $(GNL_DIR), $(GNL_FILES))
-
-OS				= $(shell uname -s)
-
-ifeq ($(OS), Darwin)
-	MLX_FLAGS = $(MLX_FLAGS_MAC)
-endif
-ifeq ($(OS), Linux)
-	MLX_FLAGS = $(MLX_FLAGS_LINUX)
-endif
-
-
 .PHONY:		all clean fclean re norm
 
-all:		$(OBJS_DIR) $(LIBMLX) $(NAME)
+all:		$(OBJS_DIR) $(MLX) $(NAME)
+
+$(MLX):		$(MLX_H) $(MLX_FLS)
+			make -C $(MLX_DIR)
 
 $(OBJS_DIR):
 				mkdir -p $(addprefix $(OBJS_DIR), $(GNL_DIR))
 				mkdir -p $(addprefix $(OBJS_DIR), $(PARSING_DIR))
 				mkdir -p $(addprefix $(OBJS_DIR), $(RENDER_DIR))
 				mkdir -p $(addprefix $(OBJS_DIR), $(UTILS_DIR))
-
-$(LIBMLX):
-				chmod +x $(addprefix $(MLX_DIR), configure)
-				make all --directory $(MLX_DIR)
 
 
 $(NAME):	$(OBJS) $(DIR_HEADERS) $(GNL_DIR)

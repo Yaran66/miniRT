@@ -22,8 +22,6 @@ void	parse_sphere(t_list **elements, char **array)
 		error_exit(ELEMENT_PARAMS_ERROR);
 	if (ft_arraylen(array) != 4)
 		error_exit(ELEMENT_PARAMS_ERROR);
-//	printf("fm parse_figures.c, argument parse_plane %s %s %s %s\n", array[0],
-//		   array[1], array[2], array[3]);
 	center = parse_coordinates(array[1]);
 	diameter = ft_atof(check_float_str(array[2]));
 	colors = parse_colors(array[3]);
@@ -41,8 +39,6 @@ void	parse_plane(t_list **elements, char **array)
 		error_exit(ELEMENT_PARAMS_ERROR);
 	if (ft_arraylen(array) != 4)
 		error_exit(ELEMENT_PARAMS_ERROR);
-//	printf("fm parse_figures.c, argument parse_plane %s %s %s %s\n", array[0],
-//		   array[1], array[2], array[3]);
 	point = parse_coordinates(array[1]);
 	normal = parse_vector(array[2]);
 	colors = parse_colors(array[3]);
@@ -62,10 +58,6 @@ void	parse_cylinder(t_list **elements, char **splitted_line)
 		error_exit(ELEMENT_PARAMS_ERROR);
 	if (ft_arraylen(splitted_line) != 6)
 		error_exit(ELEMENT_PARAMS_ERROR);
-//	printf("fm parse_figures.c, argument parse_cylinder %s %s %s %s %s %s\n",
-//		   splitted_line[0],
-//		   splitted_line[1], splitted_line[2], splitted_line[3],
-//		   splitted_line[4], splitted_line[5]);
 	point = parse_coordinates(splitted_line[1]);
 	normal = parse_vector(splitted_line[2]);
 	diameter = ft_atof(splitted_line[3]);
@@ -78,8 +70,6 @@ void	parse_cylinder(t_list **elements, char **splitted_line)
 
 void	parse_figures(t_list **elements, char **splitted_line)
 {
-//	printf("fm parse_figures.c, argument splitted_line only figure %s \n",
-//		   splitted_line[0]);
 	if (splitted_line[0][0] == 's' && splitted_line[0][1] == 'p')
 		parse_sphere(elements, splitted_line);
 	else if (splitted_line[0][0] == 'p' && splitted_line[0][1] == 'l')

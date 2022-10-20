@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef AMBIENT_LIGHT_H
-#define AMBIENT_LIGHT_H
+# define AMBIENT_LIGHT_H
 
 typedef struct s_ambient_light
 {
@@ -23,7 +22,7 @@ typedef struct s_ambient_light
 t_ambient_light	*ambient_light_new(float brightness, unsigned int hex_rgb);
 
 float			calculate_ambient_intensity(t_list *ambient_lights);
-unsigned int	calculate_ambient_color(t_list *ambient_lights,
-										unsigned int hex_rgb);
+unsigned int	calculate_ambient_color(t_list *ambient_lights, \
+				unsigned int hex_rgb);
 
 #endif //AMBIENT_LIGHT_H
